@@ -1,0 +1,134 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color:#EE4D2D;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width{
+    width: 100%;
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* Test (sau này responsive sửa lại sau */
+.grid__col-2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid__col-2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__col-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+/* Animation  */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes growth{
+    from{
+        transform: scale(var(--growth-form));
+    }
+    to{
+        transform: scale(var(--growth-to));
+    }
+}
+
+/* button */
+
+.btn{
+    height: 34px;
+    min-width: 123px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4rem;
+    background-color: #fff;
+}
+
+.btn--normal:hover{
+    background-color: rgba(0 , 0, 0, 0.1);
+}
+
+.btn.btn--primary{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* pagination */
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+.pagination__item{
+    margin: 0 12px;
+}
+
+.pagination__item-link{
+    display: block;
+    text-decoration: none;
+    color: #939393;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+}
+
+.pagination__item--active{
+    height: 30px;
+    min-width: 40px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination__item--active:hover{
+    background-color:  #ed5c3f;
+}
